@@ -1,0 +1,18 @@
+{
+  "title": "MongoDB 排序",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB sort()方法</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">在MongoDB中使用使用sort()方法对数据进行排序，sort()方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中 1 为升序排列，而-1是用于降序排列。</p><h3 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">语法</h3><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">sort()方法基本语法如下所示：</p>"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "data": ">db.COLLECTION_NAME.find().sort({KEY:1})"
+    },
+    {
+      "type": "text",
+      "data": "<strong style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">注：</strong><span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">&nbsp;如果没有指定sort()方法的排序方式，默认按照文档的升序排列。</span>"
+    }
+  ]
+}

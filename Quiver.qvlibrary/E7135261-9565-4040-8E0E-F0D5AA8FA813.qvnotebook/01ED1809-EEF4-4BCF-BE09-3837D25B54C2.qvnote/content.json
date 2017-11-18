@@ -1,0 +1,40 @@
+{
+  "title": "MongoDB 插入文档",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">文档的数据结构和JSON基本一样。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">所有存储在集合中的数据都是BSON格式。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">BSON是一种类json的一种二进制形式的存储格式,简称Binary JSON。</p>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">插入文档</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB 使用 insert() 或 save() 方法向集合中插入文档，语法如下：</p>"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "data": "db.COLLECTION_NAME.insert(document)"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">我们也可以将数据定义为一个变量，如下所示：</span>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "> document=({title: 'MongoDB 教程', \n    description: 'MongoDB 是一个 Nosql 数据库',\n    by: 'w3cschool',\n    url: 'http://www.w3cschool.cn',\n    tags: ['mongodb', 'database', 'NoSQL'],\n    likes: 100\n});"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">执行插入操作：</span>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "db.col.insert(document)"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">插入文档你也可以使用 db.col.save(document) 命令。如果不指定 _id 字段 save() 方法类似于 insert() 方法。如果指定 _id 字段，则会更新该 _id 的数据。</span>"
+    }
+  ]
+}

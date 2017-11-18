@@ -1,0 +1,18 @@
+{
+  "title": "Error assembling WAR: webxml attribute is required (or pre-existing WEB-INF/web.xml if executing in update mode",
+  "cells": [
+    {
+      "type": "text",
+      "data": "原因是pom中的包类型声明为war包"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "<packaging>war</packaging>"
+    },
+    {
+      "type": "text",
+      "data": "把war包改为jar包就ok。"
+    }
+  ]
+}

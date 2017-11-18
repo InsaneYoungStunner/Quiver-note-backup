@@ -1,0 +1,27 @@
+{
+  "title": "MongoDB 删除数据库",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 0px 0px 10px; padding: 0.25em 0px 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; border-top-style: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB 删除数据库</h2><h3 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">语法</h3><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB 删除数据库的语法格式如下：</p>"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "data": "db.dropDatabase()"
+    },
+    {
+      "type": "text",
+      "data": "<div><span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">删除当前数据库，默认为 test，你可以使用 db 命令查看当前数据库名。</span><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h3 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">删除集合</h3><div><span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">集合删除语法格式如下：</span><br></div>"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "data": "db.collection.drop()"
+    }
+  ]
+}

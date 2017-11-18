@@ -1,0 +1,27 @@
+{
+  "title": "Services",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>In a distributed application, different pieces of the app are called “services.” For example, if you imagine a video sharing site, it probably includes a service for storing application data in a database, a service for video transcoding in the background after a user uploads something, a service for the front-end, and so on.</div><div><br></div><div>Services are really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on. Scaling a service changes the number of container instances running that piece of software, assigning more computing resources to the service in the process.</div>"
+    },
+    {
+      "type": "markdown",
+      "data": "# docker-compose.yml"
+    },
+    {
+      "type": "code",
+      "language": "yaml",
+      "data": "version: \"3\"\nservices:\n  web:\n    # replace username/repo:tag with your name and image details\n    image: username/repo:tag\n    deploy:\n      replicas: 5\n      resources:\n        limits:\n          cpus: \"0.1\"\n          memory: 50M\n      restart_policy:\n        condition: on-failure\n    ports:\n      - \"80:80\"\n    networks:\n      - webnet\nnetworks:\n  webnet:"
+    },
+    {
+      "type": "markdown",
+      "data": "# 命令"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker stack ls                                            # List stacks or apps\ndocker stack deploy -c <composefile> <appname>  # Run the specified Compose file\ndocker service ls                 # List running services associated with an app\ndocker service ps <service>                  # List tasks associated with an app\ndocker inspect <task or container>\ndocker inspect --format='{{.Status.ContainerStatus.ContainerID}}' <task>\ndocker inspect --format=\"{{index .Config.Labels \\\"com.docker.swarm.task.id\\\"}}\" <container>\n# Inspect task or container\ndocker container ls -q                                      # List container IDs\ndocker stack rm <appname>                             # Tear down an application\ndocker swarm leave --force      # Take down a single node swarm from the manager"
+    }
+  ]
+}

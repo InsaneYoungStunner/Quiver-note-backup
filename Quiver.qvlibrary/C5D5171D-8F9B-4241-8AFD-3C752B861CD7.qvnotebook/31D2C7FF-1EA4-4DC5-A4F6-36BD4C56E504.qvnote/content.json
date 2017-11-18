@@ -1,0 +1,14 @@
+{
+  "title": "Python数学常量",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div class=\"article-body\" style=\"border: 0px; margin: 0px; padding: 10px 10px 20px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; font-size: 12px; font-variant-ligatures: normal; orphans: 2; widows: 2;\"><div class=\"article-intro\" id=\"content\" style=\"border: 0px; margin: 0px; padding: 0px;\"><br class=\"Apple-interchange-newline\"><table class=\"reference\" style=\"border: 0px; margin: 4px 0px; padding: 0px; width: 729px;\"><tbody style=\"border: 0px; margin: 0px; padding: 0px;\"><tr style=\"border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);\"><th style=\"border-color: rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top;\">常量</th><th style=\"border-color: rgb(85, 85, 85); margin: 0px; padding: 3px; color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); vertical-align: top;\">描述</th></tr><tr style=\"border: 0px; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);\"><td style=\"border-color: rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;\">pi</td><td style=\"border-color: rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;\">数学常量 pi（圆周率，一般以π来表示）</td></tr><tr style=\"border: 0px; margin: 0px; padding: 0px; background-color: rgb(246, 244, 240);\"><td style=\"border-color: rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; min-width: 24px; line-height: 2em; vertical-align: top;\">e</td><td style=\"border-color: rgb(212, 212, 212); margin: 0px; padding: 7px 5px; font-size: 13px; line-height: 2em; min-width: 24px; vertical-align: top;\">数学常量 e，e即自然常数（自然常数）。<br></td></tr></tbody></table></div></div>"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "data": "#!/usr/bin/python\n# -*- coding: UTF-8 -*-\nimport math\n\nprint math.pi\nprint math.e\nprint math.nan"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Apache Maven 工程模版",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 0px 0px 10px; padding: 0.25em 0px 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; border-top-style: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Maven - 工程模板</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Maven 使用原型（Archetype）概念为用户提供了大量不同类型的工程模版（614 个）。Maven 使用下面的命令帮助用户快速创建 java 项目。</p>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "mvn archetype:generate"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">什么是原型？</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">原型是一个 Maven 插件，它的任务是根据模板创建一个项目结构。我们将使用 quickstart 原型插件创建一个简单的 java 应用程序。</p><h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">使用工程模板</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">让我们打开命令控制台，跳转到&nbsp;<strong style=\"margin: 0px; padding: 0px;\">C:\\ &gt; MVN</strong>&nbsp;目录并执行以下&nbsp;<strong style=\"margin: 0px; padding: 0px;\">mvn</strong>&nbsp;命令</p>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "mvn archetype:generate "
+    }
+  ]
+}

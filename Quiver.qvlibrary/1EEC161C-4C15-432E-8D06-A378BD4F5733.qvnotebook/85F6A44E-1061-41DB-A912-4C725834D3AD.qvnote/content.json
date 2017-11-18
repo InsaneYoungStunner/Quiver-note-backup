@@ -1,0 +1,9 @@
+{
+  "title": "redis的事务 之锁机制",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<a href=\"https://redis.io/topics/transactions\">https://redis.io/topics/transactions</a>"
+    }
+  ]
+}

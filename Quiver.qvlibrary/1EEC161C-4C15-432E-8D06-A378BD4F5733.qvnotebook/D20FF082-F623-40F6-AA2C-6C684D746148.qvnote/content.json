@@ -1,0 +1,14 @@
+{
+  "title": "收集 其他命令",
+  "cells": [
+    {
+      "type": "text",
+      "data": "得到所有key"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "keys *"
+    }
+  ]
+}

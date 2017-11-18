@@ -1,0 +1,9 @@
+{
+  "title": "BASE",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">BASE：Basically Available, Soft-state, Eventually Consistent。 由 Eric Brewer 定义。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">CAP理论的核心是：一个分布式系统不可能同时很好的满足一致性，可用性和分区容错性这三个需求，最多只能同时较好的满足两个。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">BASE是NoSQL数据库通常对可用性及一致性的弱要求原则:</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">Basically Availble --基本可用</li><li style=\"margin: 0px; padding: 0px;\">Soft-state --软状态/柔性事务。 \"Soft state\" 可以理解为\"无连接\"的, 而 \"Hard state\" 是\"面向连接\"的</li><li style=\"margin: 0px; padding: 0px;\">Eventual Consistency --最终一致性 最终一致性， 也是是 ACID 的最终目的。</li></ul>"
+    }
+  ]
+}

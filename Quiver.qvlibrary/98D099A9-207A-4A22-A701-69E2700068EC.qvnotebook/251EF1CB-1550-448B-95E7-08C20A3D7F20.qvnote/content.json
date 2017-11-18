@@ -1,0 +1,41 @@
+{
+  "title": "自己写的linux命令",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### 计算文件夹/项目代码总行数"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "wc -l `find /usr/local/redis-4.0.2 -name '*.c'` | awk '{total += $1} END {print total}'"
+    },
+    {
+      "type": "markdown",
+      "data": "### 根据repo名称批量删除容器"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker ps -a | grep \"username/repo:tag\" | awk '{print $1}'|xargs -n 1 docker rm"
+    },
+    {
+      "type": "markdown",
+      "data": "### mac中使用docker容器运行其他POSIX实现的OS的命令"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ls | grep \"zip\"|docker run -v /Users/lixiaowen/Downloads:/mnt/mydata -i -a stderr -a stdin -a stdout ubuntu /usr/bin/xargs -d\"\\n\" -I {} /mnt/mydata/xargsTest.sh -p {} -l"
+    },
+    {
+      "type": "markdown",
+      "data": "### 进入该脚本所在的目录中"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "cd `dirname $0`"
+    }
+  ]
+}

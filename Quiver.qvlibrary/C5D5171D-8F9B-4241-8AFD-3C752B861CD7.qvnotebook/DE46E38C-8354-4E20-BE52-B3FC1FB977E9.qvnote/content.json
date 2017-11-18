@@ -1,0 +1,9 @@
+{
+  "title": "Python 改变当前工作目录",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; color: rgb(69, 69, 69); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">今天在写一个Python脚本，要把一个svn project 先checkout出来，然后转到这个工程目录下执行其它的svn命令。</p><p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; color: rgb(69, 69, 69); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">本来我是在Python里执行了一个cd命令，希望能转到目标工程目录下。但是这个cd命令一直执行不成功。后来了解到，其实这个cd命令已经执行成功了，只是它执行完以后又返回了当前的工作目录（也就是执行python脚本的这个目录），所以最终结果其实跟cd没有执行一样。</p><p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; color: rgb(69, 69, 69); font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">如果要达到这个目的，应该在脚本中显式地改变当前工作目录。目前我使用的是 os.chdir(\"目标目录\")。注意之前要import os</p>"
+    }
+  ]
+}

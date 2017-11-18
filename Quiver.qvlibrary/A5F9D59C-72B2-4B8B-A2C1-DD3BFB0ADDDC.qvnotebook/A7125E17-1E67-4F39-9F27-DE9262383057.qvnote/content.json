@@ -1,0 +1,9 @@
+{
+  "title": "进入maven的调试模式",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(20, 25, 30); font-family: &quot;PingFang SC&quot;, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, &quot;Helvetica Neue&quot;, Tahoma, Arial, sans-serif; font-size: 12px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">mvn archetype:generate -X （后面追加-X参数即可）</span>"
+    }
+  ]
+}

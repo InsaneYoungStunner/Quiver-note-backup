@@ -1,0 +1,9 @@
+{
+  "title": "spring  ApplicationContext 接口实现",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">最常被使用的 ApplicationContext 接口实现：</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\"><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\"><strong style=\"margin: 0px; padding: 0px;\">FileSystemXmlApplicationContext</strong>：该容器从 XML 文件中加载已被定义的 bean。在这里，你需要提供给构造器 XML 文件的完整路径</p></li><li style=\"margin: 0px; padding: 0px;\"><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\"><strong style=\"margin: 0px; padding: 0px;\">ClassPathXmlApplicationContext</strong>：该容器从 XML 文件中加载已被定义的 bean。在这里，你不需要提供 XML 文件的完整路径，只需正确配置 CLASSPATH 环境变量即可，因为，容器会从 CLASSPATH 中搜索 bean 配置文件。</p></li><li style=\"margin: 0px; padding: 0px;\"><strong style=\"margin: 0px; padding: 0px;\">WebXmlApplicationContext</strong>：该容器会在一个 web 应用程序的范围内加载在 XML 文件中已被定义的 bean。</li><li></li></ul>"
+    }
+  ]
+}

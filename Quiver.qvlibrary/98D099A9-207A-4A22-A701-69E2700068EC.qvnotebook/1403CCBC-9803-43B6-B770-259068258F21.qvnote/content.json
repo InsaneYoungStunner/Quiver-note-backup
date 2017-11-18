@@ -1,0 +1,32 @@
+{
+  "title": "Mac OS/Linux命令查询网络端口占用情况",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 1em 0px; padding: 0px; font-size: 22px; line-height: 1.5; position: relative; color: rgb(52, 73, 94); font-family: &quot;Source Han Sans&quot;, Helvetica, Arial, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, SimSun, Heiti, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">netstat命令</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "netstat -an | grep <端口号>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 1em 0px; padding: 0px; font-size: 22px; line-height: 1.5; position: relative; color: rgb(52, 73, 94); font-family: &quot;Source Han Sans&quot;, Helvetica, Arial, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, SimSun, Heiti, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">lsof命令</h2><p style=\"margin: 1em 0px; padding: 0px; color: rgb(52, 73, 94); font-family: &quot;Source Han Sans&quot;, Helvetica, Arial, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, SimSun, Heiti, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">通过list open file命令可以查看到当前打开文件，在linux中所有事物都是以文件形式存在，包括网络连接及硬件设备。</p>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "lsof -i:80"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 1em 0px; padding: 0px; color: rgb(52, 73, 94); font-family: &quot;Source Han Sans&quot;, Helvetica, Arial, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, SimSun, Heiti, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">-i</strong>参数表示网络链接，<strong style=\"margin: 0px; padding: 0px;\">:80</strong>指明端口号，该命令会同时列出PID，方便kill</p><p style=\"margin: 1em 0px; padding: 0px; color: rgb(52, 73, 94); font-family: &quot;Source Han Sans&quot;, Helvetica, Arial, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, SimSun, Heiti, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">查看所有进程监听的端口</p>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "sudo lsof -i -P | grep -i \"listen\""
+    }
+  ]
+}

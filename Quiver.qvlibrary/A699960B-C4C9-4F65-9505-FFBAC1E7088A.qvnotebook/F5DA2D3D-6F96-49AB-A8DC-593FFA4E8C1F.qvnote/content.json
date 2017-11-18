@@ -1,0 +1,9 @@
+{
+  "title": "catalina的概念",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<pre><p>catalina 就是Tomcat服务器使用的 Apache实现的servlet容器的 名字。</p><p>Tomcat的核心分为3个部分:<br>（1）Web容器---处理静态页面；<br>（2）catalina --- 一个servlet容器-----处理servlet;<br>（3）还有就是JSP容器，它就是把jsp页面翻译成一般的servlet。</p></pre>"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Zookeeper API",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p trans_replace=\"0\" trans=\"1\" style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><span style=\"margin: 0px; padding: 0px;\">ZooKeeper有一个绑定Java和C的官方API。Zookeeper社区为大多数语言（.NET，python等）提供非官方API。</span><span style=\"margin: 0px; padding: 0px;\">使用ZooKeeper API，应用程序可以连接，交互，操作数据，协调，最后断开与ZooKeeper集合的连接。</span></p><p trans_replace=\"0\" trans=\"1\" style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><span style=\"margin: 0px; padding: 0px;\">ZooKeeper API具有丰富的功能，以简单和安全的方式获得ZooKeeper集合的所有功能。</span><span style=\"margin: 0px; padding: 0px;\">ZooKeeper API提供同步和异步方法。</span></p><p trans_replace=\"0\" trans=\"1\" style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><span style=\"margin: 0px; padding: 0px;\">ZooKeeper集合和ZooKeeper API在各个方面都完全相辅相成，对开发人员有很大的帮助。</span><span style=\"margin: 0px; padding: 0px;\">让我们在本章讨论Java绑定。</span></p><div><span style=\"margin: 0px; padding: 0px;\"><br></span></div>"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "FileSystemXmlApplicationContext java.io.FileNotFoundException:",
+  "cells": [
+    {
+      "type": "code",
+      "language": "java",
+      "data": "public class MainApp {\n    public static void main(String[] args) {\n//        ApplicationContext context = new ClassPathXmlApplicationContext(\"bean.xml\");\n        ApplicationContext context = new FileSystemXmlApplicationContext(\"file:/Users/lixiaowen/Documents/workspace/code/HelloSpring/src/main/resources/bean.xml\");\n        HelloSpring obj = (HelloSpring) context.getBean(\"helloWorld\");\n        obj.getMessage();\n        String[] str={\"Hi\"};\n        HelloWorld.main(str);\n    }\n}"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/B1E264B5CB3B667951019A671401E741.png\" alt=\"2017-11-06 at 7.54 AM.png\" width=\"1108\" height=\"208\">"
+    },
+    {
+      "type": "text",
+      "data": "原来："
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "data": " ApplicationContext context = new FileSystemXmlApplicationContext(\"/Users/lixiaowen/Documents/workspace/code/HelloSpring/src/main/resources/bean.xml\");"
+    },
+    {
+      "type": "text",
+      "data": "增加file:"
+    },
+    {
+      "type": "code",
+      "language": "java",
+      "data": "        ApplicationContext context = new FileSystemXmlApplicationContext(\"file:/Users/lixiaowen/Documents/workspace/code/HelloSpring/src/main/resources/bean.xml\");\n"
+    }
+  ]
+}

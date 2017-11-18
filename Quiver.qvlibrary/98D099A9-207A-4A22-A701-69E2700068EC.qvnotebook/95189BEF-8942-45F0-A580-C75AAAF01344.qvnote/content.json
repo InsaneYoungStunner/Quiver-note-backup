@@ -1,0 +1,14 @@
+{
+  "title": "更改属主（属组）命令:chown",
+  "cells": [
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "chown  [选项]  属主[.属组]   文件名"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/8F37397DD29BE314025C23B031D16269.jpg\" alt=\"1031310.jpg\" width=\"638\" height=\"287\">"
+    }
+  ]
+}

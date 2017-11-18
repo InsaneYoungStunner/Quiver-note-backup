@@ -1,0 +1,89 @@
+{
+  "title": "Maven - 构建配置文件（Profile）",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### 构建配置文件"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">构建配置文件是一组配置的集合，用来设置或者覆盖 Maven 构建的默认配置。使用构建配置文件，可以为不同的环境定制构建过程，例如 Producation 和 Development 环境。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Profile 在 pom.xml 中使用 activeProfiles / profiles 元素指定，并且可以用很多方式触发。Profile 在构建时修改 POM，并且为变量设置不同的目标环境（例如，在开发、测试和产品环境中的数据库服务器路径）。</p><div><br></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Profile 类型</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Profile 主要有三种类型。</p><table style=\"margin: 15px 0px; padding: 0px; width: 979px; table-layout: fixed; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><thead style=\"margin: 0px; padding: 0px; background-color: rgb(249, 249, 249);\"><tr style=\"margin: 0px; padding: 0px;\"><th style=\"margin: 0px; padding: 2px 4px; background-color: rgb(255, 255, 255); border-color: rgb(204, 204, 204);\">类型</th><th style=\"margin: 0px; padding: 2px 4px; background-color: rgb(255, 255, 255); border-color: rgb(204, 204, 204);\">在哪里定义</th></tr></thead><tbody style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">Per Project</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">定义在工程 POM 文件 pom.xml 中</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">Per User</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">定义在 Maven 设置 xml 文件中 （%USER_HOME%/.m2/settings.xml）</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">Global</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">定义在 Maven 全局配置 xml 文件中 （%M2_HOME%/conf/settings.xml）<br><br></td></tr></tbody></table>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Profile 激活</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Maven 的 Profile 能够通过几种不同的方式激活。</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">显式使用命令控制台输入</li><li style=\"margin: 0px; padding: 0px;\">通过 maven 设置</li><li style=\"margin: 0px; padding: 0px;\">基于环境变量（用户 / 系统变量）</li><li style=\"margin: 0px; padding: 0px;\">操作系统配置（例如，Windows family）</li><li style=\"margin: 0px; padding: 0px;\">现存 / 缺失 文件</li></ul>"
+    },
+    {
+      "type": "markdown",
+      "data": "### 声明profile"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n   xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0\n   http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n   <modelVersion>4.0.0</modelVersion>\n   <groupId>com.companyname.projectgroup</groupId>\n   <artifactId>project</artifactId>\n   <version>1.0</version>\n   <profiles>\n      <profile>\n      <id>test</id>\n      <build>\n      <plugins>\n         <plugin>\n            <groupId>org.apache.maven.plugins</groupId>\n            <artifactId>maven-antrun-plugin</artifactId>\n            <version>1.1</version>\n            <executions>\n               <execution>\n                  <phase>test</phase>\n                  <goals>\n                     <goal>run</goal>\n                  </goals>\n                  <configuration>\n                  <tasks>\n                     <echo>Using env.test.properties</echo>\n            <copy file=\"src/main/resources/env.test.propertiestofile\n            =\"${project.build.outputDirectory}/env.properties\"/>\n                  </tasks>\n                  </configuration>\n               </execution>\n            </executions>\n         </plugin>\n      </plugins>\n      </build>\n      </profile>\n   </profiles>\n</project>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">显式 Profile 激活</h2>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn test -Pnormal"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">通过 Maven 设置激活 Profile</h2>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<settings xmlns=\"http://maven.apache.org/POM/4.0.0\"\n   xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n   xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0\n   http://maven.apache.org/xsd/settings-1.0.0.xsd\">\n   <mirrors>\n      <mirror>\n         <id>maven.dev.snaponglobal.com</id>\n         <name>Internal Artifactory Maven repository</name>\n         <url>http://repo1.maven.org/maven2/</url>\n         <mirrorOf>*</mirrorOf>\n      </mirror>\n   </mirrors>\n   <activeProfiles>\n      <activeProfile>test</activeProfile>\n   </activeProfiles>\n</settings>"
+    },
+    {
+      "type": "text",
+      "data": "然后直接运行"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn test"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">通过环境变量激活 Profile</h2>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<profile>\n   <id>test</id>\n   <activation>\n      <property>\n         <name>env</name>\n         <value>test</value>\n      </property>\n   </activation>\n</profile>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn test -Denv=test"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">通过现存 / 缺失的文件激活 Profile</h2>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<profile>\n   <id>test</id>\n   <activation>\n      <file>\n         <missing>target/generated-sources/axistools/wsdl2java/\n         com/companyname/group</missing>\n      </file>\n   </activation>\n</profile>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">通过操作系统激活 Profile</h2>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<profile>\n   <id>test</id>\n   <activation>\n      <os>\n         <name>Windows XP</name>\n         <family>Windows</family>\n         <arch>x86</arch>\n         <version>5.1.2600</version>\n      </os>\n   </activation>\n</profile>"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "命令参数",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<ul><li><li>-t:在新容器内指定一个伪终端或终端。</li><li>-i:允许你对容器内的标准输入 (STDIN) 进行交互。</li><li>-d:让容器在后台运行。</li><li>-P:将容器内部使用的网络端口映射到我们使用的主机上。</li><li>-h：设置主机名, 这个主机名是仅容器自己可见的.</li><li>--link=CONTAINER_NAME:ALIAS：把另一个容器的地址配置成一个 ALIAS 主机名.</li><li>—dns：配置 DNS 服务器.</li><li>-P :是容器内部端口随机映射到主机的高端口。</li><li>-p : 是容器内部端口绑定到指定的主机端口。</li></li></ul><p style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; orphans: 2; widows: 2; margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; line-height: 1.7;\"></p>"
+    },
+    {
+      "type": "markdown",
+      "data": "## 默认都是绑定 tcp 端口，如果要绑定 UPD 端口，可以在端口后面加上 /udp。\n"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">我们可以指定容器绑定的网络地址，比如绑定127.0.0.1。</span>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker run -d -p 127.0.0.1:5001:5002 training/webapp python app.py"
+    }
+  ]
+}

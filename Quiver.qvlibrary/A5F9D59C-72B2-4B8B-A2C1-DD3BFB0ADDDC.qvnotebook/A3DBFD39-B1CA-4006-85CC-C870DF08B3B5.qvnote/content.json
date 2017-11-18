@@ -1,0 +1,47 @@
+{
+  "title": "Apache Maven 插件",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### Maven 插件概念"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Maven 实际上是一个依赖插件执行的框架，每个任务实际上是由插件完成。Maven 插件通常被用来：</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">创建 jar 文件</li><li style=\"margin: 0px; padding: 0px;\">创建 war 文件</li><li style=\"margin: 0px; padding: 0px;\">编译代码文件</li><li style=\"margin: 0px; padding: 0px;\">代码单元测试</li><li style=\"margin: 0px; padding: 0px;\">创建工程文档</li><li style=\"margin: 0px; padding: 0px;\">创建工程报告</li></ul>"
+    },
+    {
+      "type": "markdown",
+      "data": "插件通常提供了一个<mark>goal</mark>的集合，并且可以使用下面的语法执行："
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn [plugin-name]:[goal-name]"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">例如，一个 Java 工程可以使用 maven-compiler-plugin 的 compile-goal 编译，使用以下命令：</p>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn compiler:compile"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">插件类型</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Maven 提供了下面两种类型的插件：</p><table style=\"margin: 15px 0px; padding: 0px; width: 979px; table-layout: fixed; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><thead style=\"margin: 0px; padding: 0px; background-color: rgb(249, 249, 249);\"><tr style=\"margin: 0px; padding: 0px;\"><th style=\"margin: 0px; padding: 2px 4px; background-color: rgb(255, 255, 255); border-color: rgb(204, 204, 204);\">类型</th><th style=\"margin: 0px; padding: 2px 4px; background-color: rgb(255, 255, 255); border-color: rgb(204, 204, 204);\">描述</th></tr></thead><tbody style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">Build plugins</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">在构建时执行，并在 pom.xml 的 元素中配置。</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">Reporting plugins</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">在网站生成过程中执行，并在 pom.xml 的 元素中配置。<br><br></td></tr></tbody></table>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">下面是一些常用插件的列表：</p><table style=\"margin: 15px 0px; padding: 0px; width: 979px; table-layout: fixed; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><thead style=\"margin: 0px; padding: 0px; background-color: rgb(249, 249, 249);\"><tr style=\"margin: 0px; padding: 0px;\"><th style=\"margin: 0px; padding: 2px 4px; background-color: rgb(255, 255, 255); border-color: rgb(204, 204, 204);\">插件</th><th style=\"margin: 0px; padding: 2px 4px; background-color: rgb(255, 255, 255); border-color: rgb(204, 204, 204);\">描述</th></tr></thead><tbody style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">clean</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">构建之后清理目标文件。删除目标目录。</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">compiler</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">编译 Java 源文件。</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">surefile</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">运行 JUnit 单元测试。创建测试报告。</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">jar</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">从当前工程中构建 JAR 文件。</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">war</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">从当前工程中构建 WAR 文件。</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">javadoc</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">为工程生成 Javadoc。</td></tr><tr style=\"margin: 0px; padding: 0px;\"><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">antrun</td><td style=\"margin: 0px; padding: 2px 4px; min-width: 40px; height: 30px; border-color: rgb(204, 204, 204); vertical-align: top; box-sizing: border-box;\">从构建过程的任意一个阶段中运行一个 ant 任务的集合。<br><br></td></tr></tbody></table>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">以下关键概念：</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">插件是在 pom.xml 中使用 plugins 元素定义的。</li><li style=\"margin: 0px; padding: 0px;\">每个插件可以有多个目标。</li><li style=\"margin: 0px; padding: 0px;\">你可以定义阶段，插件会使用它的 phase 元素开始处理。我们已经使用了&nbsp;<strong style=\"margin: 0px; padding: 0px;\">clean</strong>&nbsp;阶段。</li><li style=\"margin: 0px; padding: 0px;\">你可以通过绑定到插件的goal的方式来配置要执行的任务。我们已经绑定了&nbsp;<strong style=\"margin: 0px; padding: 0px;\">echo</strong>&nbsp;任务到 maven-antrun-plugin 的&nbsp;<strong style=\"margin: 0px; padding: 0px;\">run</strong>&nbsp;目标。</li><li style=\"margin: 0px; padding: 0px;\">就是这样，Maven 将处理剩下的事情。它将下载本地仓库中获取不到的插件，并开始处理。</li></ul>"
+    }
+  ]
+}

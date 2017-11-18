@@ -1,0 +1,60 @@
+{
+  "title": "zooInspector安装",
+  "cells": [
+    {
+      "type": "text",
+      "data": "首先在zookeeper的项目目录下执行命令"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ant"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/4501E54F4ADE590F4494E0146A708789.png\" alt=\"2017-11-12 at 2.54 PM.png\" width=\"681\" height=\"365\">"
+    },
+    {
+      "type": "text",
+      "data": "然后进入zooinspector目录"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "/Users/lixiaowen/Documents/workspace/github/zookeeper/src/contrib/zooinspector"
+    },
+    {
+      "type": "text",
+      "data": "找到对应的build.xml文件"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/B69DD226F8D92D54CCA28F4443DD5BBF.png\" alt=\"2017-11-12 at 3.01 PM.png\" width=\"1003\" height=\"372\">"
+    },
+    {
+      "type": "text",
+      "data": "在manifest标签下加入classpath："
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "<attribute name=\"Class-Path\" value=\"lib/log4j-1.2.15.jar lib/TableLayout-20050920.jar lib/zookeeper-3.5.2.jar lib/jToaster-1.0.4.jar\" />"
+    },
+    {
+      "type": "text",
+      "data": "如下图所示："
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/1EF397FF527B5C6A132B84A43AA1A8DF.png\" alt=\"2017-11-12 at 3.02 PM.png\" width=\"923\" height=\"653\">"
+    },
+    {
+      "type": "text",
+      "data": "然后在该目录下执行ant"
+    },
+    {
+      "type": "text",
+      "data": "<br>"
+    }
+  ]
+}

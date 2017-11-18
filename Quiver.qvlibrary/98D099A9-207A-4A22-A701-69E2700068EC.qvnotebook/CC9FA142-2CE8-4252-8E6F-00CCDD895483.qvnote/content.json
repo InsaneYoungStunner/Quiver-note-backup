@@ -1,0 +1,25 @@
+{
+  "title": "Linux 根据进程名查找进程ID 根据进程ip查找进程名",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h1 style=\"box-sizing: border-box; margin: 0.8em 0px; font-size: 2.6em; font-family: &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, SimHei, Arial, SimSun; font-weight: 100; color: rgb(69, 69, 69); padding: 0px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(54, 46, 43); font-family: Arial;\"><span style=\"box-sizing: border-box; margin: 0px; padding: 0px; font-size: 24px;\">pgrep str命令进行模糊匹配，查找匹配该特征串的进程ID&nbsp;</span></span></h1>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/2096FBB7598B43393FFB08203616D870.png\" alt=\"2017-11-14 at 10.54 PM.png\" width=\"351\" height=\"44\">"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif; text-align: justify;\">在ps命令中，“-T”选项可以开启与标准input相关联的设备有关的进程的信息线程查看。</p><p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif; text-align: justify;\">\"-p\"可以开启与字符串相匹配的进程的信息&nbsp;</p>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif; text-align: justify;\"></p><p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif; text-align: justify;\"><img src=\"quiver-image-url/C2E2E0A50F55DD0F4628D79399BBDD4C.png\" alt=\"2017-11-14 at 10.57 PM.png\" width=\"610\" height=\"94\"><br></p><p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif; text-align: justify;\"></p>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"box-sizing: border-box; margin: 0px; padding: 0px; word-wrap: break-word; word-break: normal; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: &quot;Microsoft Yahei&quot;, 微软雅黑, arial, 宋体, sans-serif; text-align: justify;\"><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\">SPID”栏表示线程ID，而“CMD”栏则显示了线程名称</span><br></p>"
+    }
+  ]
+}

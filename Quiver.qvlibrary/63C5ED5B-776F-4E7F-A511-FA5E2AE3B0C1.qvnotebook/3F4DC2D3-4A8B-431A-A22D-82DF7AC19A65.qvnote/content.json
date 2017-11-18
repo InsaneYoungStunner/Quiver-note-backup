@@ -1,0 +1,9 @@
+{
+  "title": "NoSQL的优点/缺点",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">优点:</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">- 高可扩展性</li><li style=\"margin: 0px; padding: 0px;\">- 分布式计算</li><li style=\"margin: 0px; padding: 0px;\">- 低成本</li><li style=\"margin: 0px; padding: 0px;\">- 架构的灵活性，半结构化数据</li><li style=\"margin: 0px; padding: 0px;\">- 没有复杂的关系</li></ul><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">缺点:</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">- 没有标准化</li><li style=\"margin: 0px; padding: 0px;\">- 有限的查询功能（到目前为止）</li><li style=\"margin: 0px; padding: 0px;\">- 最终一致是不直观的程序</li></ul>"
+    }
+  ]
+}

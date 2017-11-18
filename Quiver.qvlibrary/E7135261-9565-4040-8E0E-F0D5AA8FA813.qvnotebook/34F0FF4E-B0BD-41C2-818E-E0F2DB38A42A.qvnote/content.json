@@ -1,0 +1,23 @@
+{
+  "title": "MongoDB 使用 (<) 和 (>) 查询 - $lt 和 $gt",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">如果你想获取\"col\"集合中 \"likes\" 大于100，小于 200 的数据，你可以使用以下命令：</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "db.col.find({likes : {$lt :200, $gt : 100}})"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">类似于SQL语句：</span>"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "data": "Select * from col where likes>100 AND  likes<200;"
+    }
+  ]
+}

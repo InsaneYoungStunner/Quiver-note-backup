@@ -1,0 +1,31 @@
+{
+  "title": "MongoDB 创建数据库",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h3 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 14px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">语法</h3><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB 创建数据库的语法格式如下：</p>"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "data": "use DATABASE_NAME"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">如果数据库不存在，则创建数据库，否则切换到指定数据库。</span>"
+    },
+    {
+      "type": "text",
+      "data": "<div><br></div><div><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">如果你想查看所有数据库，可以使用&nbsp;<strong style=\"margin: 0px; padding: 0px;\">show dbs</strong>&nbsp;命令：</p></div>"
+    },
+    {
+      "type": "code",
+      "language": "sql",
+      "data": "show dbs"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">可以看到，我们刚创建的数据库（如 youj） 并不在数据库的列表中， 要显示它，我们需要向 youj 数据库插入一些数据。</span>"
+    }
+  ]
+}

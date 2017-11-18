@@ -1,0 +1,10 @@
+{
+  "title": "jedis之监视器",
+  "cells": [
+    {
+      "type": "code",
+      "language": "java",
+      "data": "import redis.clients.jedis.Jedis;\nimport redis.clients.jedis.JedisMonitor;\n\npublic class bench {\n    public static void main(String[] args) {\n\n        Jedis jedis = new Jedis(\"localhost\", 6379);\n\n        jedis.monitor(new JedisMonitor() {\n            public void onCommand(String command) {\n                System.out.println(command);\n            }\n        });\n    }\n}\n"
+    }
+  ]
+}

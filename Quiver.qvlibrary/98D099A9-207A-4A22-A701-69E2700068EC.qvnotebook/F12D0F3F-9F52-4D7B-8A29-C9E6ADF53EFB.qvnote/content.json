@@ -1,0 +1,17 @@
+{
+  "title": "curl与nc的区别",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## [Convert curl command to netcat](https://stackoverflow.com/questions/27745104/convert-curl-command-to-netcat)\n\n## [What's the difference between using netcat (nc) and curl for HTTP requests](https://unix.stackexchange.com/questions/320466/whats-the-difference-between-using-netcat-nc-and-curl-for-http-requests)"
+    },
+    {
+      "type": "text",
+      "data": "<div>nc（或netcat）实用程序用于太阳下涉及TCP或UDP的任何东西。 它可以打开TCP连接，发送UDP数据包，监听任意TCP和UDP端口，进行端口扫描，并处理IPv4和IPv6。 与telnet（1）不同，nc脚本很好，并将错误消息分离到标准错误，而不是将其发送到标准输出，如telnet（1）所示。</div><div>常见用途包括：</div><div><br></div><div>简单的TCP代理</div><div>基于shell脚本的HTTP客户端和服务器</div><div>网络守护进程测试</div><div>ssh（1）的SOCKS或HTTP ProxyCommand</div>"
+    },
+    {
+      "type": "text",
+      "data": "curl：使用HTTP，HTTPS，FTP，FTPS，SCP，SFTP，TFTP，DICT，TELNET，LDAP或FILE之间的协议之一，Curl将数据从服务器传输到服务器。 （要传输多个文件，请使用wget或FTP。）"
+    }
+  ]
+}

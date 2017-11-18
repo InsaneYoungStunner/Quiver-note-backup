@@ -1,0 +1,52 @@
+{
+  "title": "jd-gui不能使用",
+  "cells": [
+    {
+      "type": "text",
+      "data": "java1.9不能使用jd-gui，需要使用1.8"
+    },
+    {
+      "type": "text",
+      "data": "首先找到java安装包位置"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(255, 255, 255);\">/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/bin</span>"
+    },
+    {
+      "type": "text",
+      "data": "找到jd-gui安装包位置"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "/Applications/JD-GUI.app/Contents/MacOS"
+    },
+    {
+      "type": "text",
+      "data": "打开启动脚本文件"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "universalJavaApplicationStub.sh"
+    },
+    {
+      "type": "text",
+      "data": "在257行加入语句"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "JAVACMD=\"/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/bin/java\""
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/102536081171D6376C9E7B7325806BD4.png\" alt=\"2017-11-12 at 2.52 PM.png\" width=\"906\" height=\"425\">"
+    },
+    {
+      "type": "text",
+      "data": "就ok了<div><br></div>"
+    }
+  ]
+}

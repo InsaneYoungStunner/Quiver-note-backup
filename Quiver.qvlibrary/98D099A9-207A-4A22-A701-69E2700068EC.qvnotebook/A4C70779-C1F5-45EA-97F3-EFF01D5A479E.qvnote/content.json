@@ -1,0 +1,36 @@
+{
+  "title": "chpasswd",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "chpasswd命令是批量更新用户口令的工具，是把一个文件内容重新定向添加到/etc/shadow中。\n\n## 语法"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "chpasswd(选项)"
+    },
+    {
+      "type": "markdown",
+      "data": "## 选项"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "-e：输入的密码是加密后的密文；\n-h：显示帮助信息并退出；\n-m：当被支持的密码未被加密时，使用MD5加密代替DES加密。"
+    },
+    {
+      "type": "text",
+      "data": "<p>先创建用户密码对应文件，格式为<br></p><p></p>\n"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "username:password"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(34, 34, 34); font-family: Menlo, monospace; font-size: 12px; font-variant-ligatures: normal; orphans: 2; white-space: pre-wrap; widows: 2; background-color: rgb(255, 255, 255);\">，必须以这种格式来书写，并且不能有空行，保存成文本文件user.txt，然后执行chpasswd命令：</span>"
+    }
+  ]
+}

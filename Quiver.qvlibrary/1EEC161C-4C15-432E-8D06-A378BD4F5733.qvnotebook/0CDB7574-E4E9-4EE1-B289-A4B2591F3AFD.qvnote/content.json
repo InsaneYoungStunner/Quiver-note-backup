@@ -1,0 +1,27 @@
+{
+  "title": "在远程服务上执行命令",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## 语法"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "$ redis-cli -h host -p port -a password"
+    },
+    {
+      "type": "markdown",
+      "data": "## 实例\n以下实例演示了如何连接到主机为 127.0.0.1，端口为 6379 ，密码为 mypass 的 redis 服务上。"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "$redis-cli -h 127.0.0.1 -p 6379 -a \"mypass\""
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}

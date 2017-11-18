@@ -1,0 +1,30 @@
+{
+  "title": "Apache Maven 构建自动化",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "[详细情况](https://www.w3cschool.cn/maven/4dt81htv.html)"
+    },
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 0px 0px 10px; padding: 0.25em 0px 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; border-top-style: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Maven - 构建自动化</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">构建自动化定义为一种场景：一旦该工程成功构建完成，其相关的依赖工程即开始构建，目的是为了保证其依赖项目的稳定。</p>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">我们有 2 种方式：</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">在 bus-core-api 的 pom 文件里添加一个编译目标来提醒 app-web-ui 工程和 app-desktop-ui 工程启动创建。</li><li style=\"margin: 0px; padding: 0px;\">使用一个持续集成（CI）的服务器，比如 Hudson，来实现自动化创建。</li></ul>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">使用 Maven</h2>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<build>\n   <plugins>\n   <plugin>\n   <artifactId>maven-invoker-plugin</artifactId>\n   <version>1.6</version>\n      <configuration>\n         <debug>true</debug>\n         <pomIncludes>\n            <pomInclude>app-web-ui/pom.xml</pomInclude>\n            <pomInclude>app-desktop-ui/pom.xml</pomInclude> \n         </pomIncludes>\n      </configuration>\n      <executions>\n         <execution>\n            <id>build</id>\n            <goals>\n               <goal>run</goal>\n            </goals>\n         </execution>\n      </executions>\n   </plugin>\n   </plugins>\n   <build>\n"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">使用持续集成服务器（CI）</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">由于开发人员不需要每次多一个新的依赖工程时都去更新 bus-core-api 工程的 pom 文件， 因此使用一个持续集成的服务器更加合适，例如，添加一个新的 app-mobile-ui 的工程，它同样依赖于 bus-core-ui 工程。Hudson 将会借助 Maven 的依赖管理功能实现工程的自动化创建。</p><div><br></div>"
+    }
+  ]
+}

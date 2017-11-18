@@ -1,0 +1,9 @@
+{
+  "title": "is 与 == 区别：",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<p style=\"border: 0px; margin: 0px; padding: 4px; line-height: 1.5em; font-size: 14px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; word-wrap: break-word; background-color: rgb(243, 247, 240); font-style: italic; color: rgb(51, 51, 51); font-variant-ligatures: normal; orphans: 2; widows: 2; background-position: initial initial; background-repeat: initial initial;\">is 与 == 区别：</p><p style=\"border: 0px; margin: 0px; padding: 4px; line-height: 1.5em; font-size: 14px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Noto Sans CJK SC&quot;, &quot;WenQuanYi Micro Hei&quot;, Arial, sans-serif; word-wrap: break-word; background-color: rgb(243, 247, 240); font-style: italic; color: rgb(51, 51, 51); font-variant-ligatures: normal; orphans: 2; widows: 2; background-position: initial initial; background-repeat: initial initial;\">is 用于判断两个变量引用对象是否为同一个， == 用于判断引用变量的值是否相等。</p>"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Container",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>An image is a lightweight, stand-alone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.</div><div><br></div><div>A container is a runtime instance of an image—what the image becomes in memory when actually executed. It runs completely isolated from the host environment by default, only accessing host files and ports if configured to do so.</div><div><br></div><div>Containers run apps natively on the host machine’s kernel. They have better performance characteristics than virtual machines that only get virtual access to host resources through a hypervisor. Containers can get native access, each one running in a discrete process, taking no more memory than any other executable.</div>"
+    },
+    {
+      "type": "text",
+      "data": "Containers can share a single kernel, and the only information that needs to be in a container image is the executable and its package dependencies, which never need to be installed on the host system. These processes run like native processes, and you can manage them individually by running commands like <code>docker ps</code>—just like you would run <code>ps </code>on Linux to see active processes. Finally, because they contain all their dependencies, there is no configuration entanglement; a containerized app “runs anywhere.”"
+    },
+    {
+      "type": "markdown",
+      "data": "# Dockerfile"
+    },
+    {
+      "type": "code",
+      "language": "dockerfile",
+      "data": "# Use an official Python runtime as a parent image\nFROM python:2.7-slim\n\n# Set the working directory to /app\nWORKDIR /app\n\n# Copy the current directory contents into the container at /app\nADD . /app\n\n# Install any needed packages specified in requirements.txt\nRUN pip install -r requirements.txt\n\n# Make port 80 available to the world outside this container\nEXPOSE 80\n\n# Define environment variable\nENV NAME World\n\n# Run app.py when the container launches\nCMD [\"python\", \"app.py\"]"
+    },
+    {
+      "type": "markdown",
+      "data": "# requirements.txt"
+    },
+    {
+      "type": "markdown",
+      "data": "```\nFlask\nRedis\n```"
+    },
+    {
+      "type": "markdown",
+      "data": "# App.py"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "data": "from flask import Flask\nfrom redis import Redis, RedisError\nimport os\nimport socket\n\n# Connect to Redis\nredis = Redis(host=\"redis\", db=0, socket_connect_timeout=2, socket_timeout=2)\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef hello():\n    try:\n        visits = redis.incr(\"counter\")\n    except RedisError:\n        visits = \"<i>cannot connect to Redis, counter disabled</i>\"\n\n    html = \"<h3>Hello {name}!</h3>\" \\\n           \"<b>Hostname:</b> {hostname}<br/>\" \\\n           \"<b>Visits:</b> {visits}\"\n    return html.format(name=os.getenv(\"NAME\", \"world\"), hostname=socket.gethostname(), visits=visits)\n\nif __name__ == \"__main__\":\n    app.run(host='0.0.0.0', port=80)"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "markdown",
+      "data": "# 命令"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker build -t friendlyname .  # Create image using this directory's Dockerfile\ndocker run -p 4000:80 friendlyname  # Run \"friendlyname\" mapping port 4000 to 80\ndocker run -d -p 4000:80 friendlyname         # Same thing, but in detached mode\ndocker container ls                                # List all running containers\ndocker container ls -a             # List all containers, even those not running\ndocker container stop <hash>           # Gracefully stop the specified container\ndocker container kill <hash>         # Force shutdown of the specified container\ndocker container rm <hash>        # Remove specified container from this machine\ndocker container rm $(docker container ls -a -q)         # Remove all containers\ndocker image ls -a                             # List all images on this machine\ndocker image rm <image id>            # Remove specified image from this machine\ndocker image rm $(docker image ls -a -q)   # Remove all images from this machine\ndocker login             # Log in this CLI session using your Docker credentials\ndocker tag <image> username/repository:tag  # Tag <image> for upload to registry\ndocker push username/repository:tag            # Upload tagged image to registry\ndocker run username/repository:tag                   # Run image from a registry"
+    }
+  ]
+}

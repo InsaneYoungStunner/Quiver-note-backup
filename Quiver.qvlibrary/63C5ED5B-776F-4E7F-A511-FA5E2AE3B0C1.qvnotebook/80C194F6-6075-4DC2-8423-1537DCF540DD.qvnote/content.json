@@ -1,0 +1,9 @@
+{
+  "title": "RDBMS vs NoSQL 区别",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 class=\"tutheader\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">RDBMS vs NoSQL</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">RDBMS&nbsp;</strong><br style=\"margin: 0px; padding: 0px;\">- 高度组织化结构化数据&nbsp;<br style=\"margin: 0px; padding: 0px;\">- 结构化查询语言（SQL） (SQL)&nbsp;<br style=\"margin: 0px; padding: 0px;\">- 数据和关系都存储在单独的表中。&nbsp;<br style=\"margin: 0px; padding: 0px;\">- 数据操纵语言，数据定义语言&nbsp;<br style=\"margin: 0px; padding: 0px;\">- 严格的一致性<br style=\"margin: 0px; padding: 0px;\">- 基础事务</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">NoSQL&nbsp;</strong><br style=\"margin: 0px; padding: 0px;\">- 代表着不仅仅是SQL<br style=\"margin: 0px; padding: 0px;\">- 没有声明性查询语言<br style=\"margin: 0px; padding: 0px;\">- 没有预定义的模式<br style=\"margin: 0px; padding: 0px;\">-键 - 值对存储，列存储，文档存储，图形数据库<br style=\"margin: 0px; padding: 0px;\">- 最终一致性，而非ACID属性<br style=\"margin: 0px; padding: 0px;\">- 非结构化和不可预知的数据<br style=\"margin: 0px; padding: 0px;\">- CAP定理&nbsp;<br style=\"margin: 0px; padding: 0px;\">- 高性能，高可用性和可伸缩性</p>"
+    }
+  ]
+}

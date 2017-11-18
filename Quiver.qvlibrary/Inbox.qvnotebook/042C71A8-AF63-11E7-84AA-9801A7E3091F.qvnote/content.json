@@ -1,0 +1,17 @@
+{
+  "title": "Python3 基本数据类型 | 菜鸟教程",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<span class=\"hl-identifier c1\">print</span><span class=\n\"hl-brackets c2\">(</span><span class=\n\"hl-identifier c1\">word</span><span class=\n\"hl-brackets c2\">[</span><span class=\n\"hl-number c3\">0</span><span class=\n\"hl-brackets c2\">]</span><span class=\"hl-code c4\">,</span>\n<span class=\"hl-identifier c1\">word</span><span class=\n\"hl-brackets c2\">[</span><span class=\n\"hl-number c3\">5</span><span class=\n\"hl-brackets c2\">]</span><span class=\"hl-brackets c2\">)</span>"
+    },
+    {
+      "type": "text",
+      "data": "<p>Clipped from: <a href=\"http://www.runoob.com/python3/python3-data-type.html\">http://www.runoob.com/python3/python3-data-type.html</a></p>"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}

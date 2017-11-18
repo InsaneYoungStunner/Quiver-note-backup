@@ -1,0 +1,36 @@
+{
+  "title": "os.chflags()在linux无用",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "Linux does not provide the chflags syscall, so Python does not provide the wrapper `os.chflags()`.\nThe chattr command uses the code (`e2fsprogs-1.42.13`'s `lib/e2p/fsetflags.c`):"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "data": "        fd = open (name, OPEN_FLAGS);\n        if (fd == -1)\n                return -1;\n        f = (int) flags;\n        r = ioctl (fd, EXT2_IOC_SETFLAGS, &f);\n        if (r == -1)\n                save_errno = errno;\n        close (fd);"
+    },
+    {
+      "type": "markdown",
+      "data": "\t\nto set the extended attributes for a file, so if you port that to Python (and use some C to extract the value for `EXT2_IOC_SETFLAGS` from ext2fs/ext2_fs.h), you can do something like:"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "data": "#!/usr/bin/python2\n\nimport fcntl\nimport os\nimport struct\n\n# Taken from ext2fs/ext2_fs.h.\nEXT2_IMMUTABLE_FL = 0x00000010\nEXT2_IOC_SETFLAGS = 0x40086602\n\nfd = os.open('/var/tmp/testfile', os.O_RDWR)\nf = struct.pack('i', EXT2_IMMUTABLE_FL)\nfcntl.ioctl(fd, EXT2_IOC_SETFLAGS, f);\nos.close(fd)"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Et voilà:</span>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "[tim@passepartout ~]$ lsattr /var/tmp/testfile\n----i----------- /var/tmp/testfile\n[tim@passepartout ~]$"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">But for all practical purposes it is probably much more prudent to execute&nbsp;</span><code style=\"padding: 1px 5px; border: 0px; font-variant-ligatures: normal; font-variant-numeric: inherit; font-stretch: inherit; font-size: 13px; line-height: inherit; font-family: Consolas, Menlo, Monaco, &quot;Lucida Console&quot;, &quot;Liberation Mono&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, monospace, sans-serif; vertical-align: baseline; background-color: rgb(239, 240, 241); white-space: pre-wrap; color: rgb(36, 39, 41); orphans: 2; widows: 2;\">chattr(1)</code><span style=\"color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">&nbsp;as a child process than to turn the proof-of-concept above into something that runs reliably without maintenance.</span>"
+    }
+  ]
+}

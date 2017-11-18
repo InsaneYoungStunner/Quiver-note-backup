@@ -1,0 +1,35 @@
+{
+  "title": "Docker容器连接",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## docker port 命令可以让我们快捷地查看端口的绑定情况。"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker port adoring_stonebraker 5002"
+    },
+    {
+      "type": "markdown",
+      "data": "# Docker容器连接"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">端口映射并不是唯一把 docker 连接到另一个容器的方法。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">docker有一个连接系统允许将多个容器连接在一起，共享连接信息。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">docker连接会创建一个父子关系，其中父容器可以看到子容器的信息。</p><br>"
+    },
+    {
+      "type": "markdown",
+      "data": "## 容器命名\n当我们创建一个容器的时候，docker会自动对它进行命名。另外，我们也可以使用--name标识来命名容器，例如："
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker run -d -P --name youj training/webapp python app.py"
+    },
+    {
+      "type": "text",
+      "data": ""
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "MongoDB 更新文档",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 0px 0px 10px; padding: 0.25em 0px 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; border-top-style: none; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB使用<span class=\"color_h1\" style=\"margin: 0px; padding: 0px;\">update()函数</span>更新数据</h2><br style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><h2 class=\"tutheader\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">描述</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">本章节我们将开始学习如何更新MongoDB中的集合数据。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB数据更新可以使用update()函数</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "db.collection.update( criteria, objNew, upsert, multi )"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\">update()函数接受以下四个参数：</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7;\"><li style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">criteria&nbsp;</strong>: update的查询条件，类似sql update查询内where后面的。</li><li style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">objNew&nbsp;</strong>: update的对象和一些更新的操作符（如$,$inc...）等，也可以理解为sql update查询内set后面的</li><li style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">upsert&nbsp;</strong>: 这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li><li style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">multi&nbsp;</strong>: mongodb默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li></ul>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"tutheader\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">update() 命令</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">如果criteria参数匹配集合中的任何一条数据，它将会执行替换命令，否则会插入一条新的数据。</span>"
+    }
+  ]
+}

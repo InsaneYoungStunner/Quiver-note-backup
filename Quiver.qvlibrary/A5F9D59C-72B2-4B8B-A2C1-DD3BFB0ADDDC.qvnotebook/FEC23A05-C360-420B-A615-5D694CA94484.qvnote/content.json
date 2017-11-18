@@ -1,0 +1,18 @@
+{
+  "title": "Apache Maven 构建 & 测试工程",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">打开命令控制台，跳转到 C:\\MVN\\consumerBanking 目录下，并执行以下&nbsp;</span><strong style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">mvn</strong><span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">&nbsp;命令。</span>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">面是要学习的关键概念：</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">我们给了 maven 两个目标，首先清理目标目录（clean），然后打包工程构建的输出为 jar（package）文件。</li><li style=\"margin: 0px; padding: 0px;\">打包好的 jar 文件可以在 consumerBanking\\target 中获得，名称为 consumerBanking-1.0-SNAPSHOT.jar。</li><li style=\"margin: 0px; padding: 0px;\">测试报告存放在 consumerBanking\\target\\surefire-reports 文件夹中。</li><li style=\"margin: 0px; padding: 0px;\">Maven 编译源码文件，以及测试源码文件。</li><li style=\"margin: 0px; padding: 0px;\">接着 Maven 运行测试用例。</li><li style=\"margin: 0px; padding: 0px;\">最后 Maven 创建工程包。</li></ul>"
+    }
+  ]
+}

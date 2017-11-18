@@ -1,0 +1,31 @@
+{
+  "title": "Apache Maven Web 应用",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">创建 Web 应用</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">建立一个简单的 Java web 应用，我们可以使用 maven-archetype-webapp 插件。</p>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn archetype:generate \n-DgroupId=com.companyname.automobile \n-DartifactId=trucks\n-DarchetypeArtifactId=maven-archetype-webapp \n-DinteractiveMode=false\n"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Build Web Application</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">打开终端，进入 C:\\MVN\\trucks 目录，然后执行如下&nbsp;<strong style=\"margin: 0px; padding: 0px;\">mvn</strong>&nbsp;命令.</p>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "mvn clean package"
+    },
+    {
+      "type": "text",
+      "data": "<h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">部署 Web 应用</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">现在拷贝在&nbsp;<strong style=\"margin: 0px; padding: 0px;\">trucks &gt; target &gt;</strong>&nbsp;文件夹下的 trucks.war 到你的 web 服务器的 webapp 目录下，并且重启 web 服务。</p><h2 class=\"head2\" style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">测试 Web 应用</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">使用 URL:&nbsp;<strong style=\"margin: 0px; padding: 0px;\">http://\\&lt;server-name&gt;:\\&lt;port-number&gt;/trucks/index.jsp</strong>&nbsp;来运行你的 Web 应用。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">验证输出结果：</p>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/BC1B9544E671503F27EED0B4E1C88E81.jpg\" alt=\"web page.jpeg\" width=\"556\" height=\"199\">"
+    }
+  ]
+}

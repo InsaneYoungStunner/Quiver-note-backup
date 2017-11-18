@@ -1,0 +1,30 @@
+{
+  "title": "在mac中运行docker里Ubuntu的命令，并使用pipe传输",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/05462B2CEC7B385741BEB09442B40125.png\" alt=\"2017-10-25 at 1.05 AM.png\" width=\"734\" height=\"86\">"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/F21BE505944BCB6AAE2DC34625A29C0D.png\" alt=\"2017-10-25 at 1.10 AM.png\" width=\"508\" height=\"235\"><br>"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/29BCE1B567F1C1ADE5897A4360BD5DE8.png\" alt=\"2017-10-25 at 2.09 AM.png\" width=\"739\" height=\"282\">"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "ls | grep \"zip\"|docker run -v /Users/lixiaowen/Downloads:/mnt/mydata -i -a stderr -a stdin -a stdout ubuntu /usr/bin/xargs -d\"\\n\" -I {} /mnt/mydata/xargsTest.sh -p {} -l"
+    },
+    {
+      "type": "markdown",
+      "data": "\n# 背景"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/A02E20BFD540EC2BCA9B4808CA08AFDC.png\" alt=\"2017-10-25 at 2.11 AM.png\" width=\"534\" height=\"228\">"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "title": "maven自动部署到远程tomcat",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h1 style=\"margin: 10px 0px; font-size: 28px; color: rgb(75, 75, 79); line-height: 1.5; font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">1.配置tomcat-users.xml</h1>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 10px auto; color: rgb(75, 75, 75); font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">首先在Tomcat里配置deploy的用户(tomcat根目录/conf/tomcat-users.xml):</p>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<role rolename=\"tomcat\"/>\n<role rolename=\"manager\"/>\n<role rolename=\"manager-gui\"/>\n<role rolename=\"manager-script\" />\n<role rolename=\"admin-gui\"/>\n<user username=\"admin\" password=\"admin\" roles=\"tomcat,manager,manager-script,admin-gui\" />\n<user username=\"tomcat\" password=\"tomcat\" roles=\"manager-gui\" />\n"
+    },
+    {
+      "type": "text",
+      "data": "<h1 style=\"margin: 10px 0px; font-size: 28px; color: rgb(75, 75, 79); line-height: 1.5; font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">2.配置maven setting.xml</h1>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 10px auto; color: rgb(75, 75, 75); font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">修改Maven的setting.xml（默认是C:\\Users\\用户名.m2\\settings.xml)，在节点下添加</p>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<server>\n  <id>tomcat7</id>\n  <username>admin</username>\n  <password>admin</password>\n</server>"
+    },
+    {
+      "type": "text",
+      "data": "<h1 style=\"margin: 10px 0px; font-size: 28px; color: rgb(75, 75, 79); line-height: 1.5; font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">3.配置pom.xml &nbsp;</h1>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<plugin>\n                <groupId>org.apache.tomcat.maven</groupId>\n                <artifactId>tomcat7-maven-plugin</artifactId>\n                <version>2.2</version>\n                <configuration>\n                    <url>http://127.0.0.1:8080/manager/text</url>\n                    <server>tomcat7</server>\n                    <path>/ROOT</path>\n                    <charset>utf8</charset>\n                    <update>true</update>\n                </configuration>\n            </plugin>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<!-- 添加相关依赖 -->   \n   <dependency>\n            <groupId>org.apache.tomcat</groupId>\n            <artifactId>tomcat-servlet-api</artifactId>\n            <version>8.5.4</version>\n        </dependency>"
+    },
+    {
+      "type": "text",
+      "data": "<h1 style=\"margin: 10px 0px; font-size: 28px; color: rgb(75, 75, 79); line-height: 1.5; font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">4.修改ip访问权限</h1><p style=\"margin: 10px auto; padding: 0px; color: rgb(51, 51, 51); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">在tomcat服务器的conf/Catalina/localhost/目录下创建一个manager.xml文件，写入如下值:</p>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Context privileged=\"true\" antiResourceLocking=\"false\"\n         docBase=\"${catalina.home}/webapps/manager\">\n             <Valve className=\"org.apache.catalina.valves.RemoteAddrValve\" allow=\"^.*$\" />\n</Context>"
+    },
+    {
+      "type": "text",
+      "data": "<h1 style=\"margin: 10px 0px; font-size: 28px; color: rgb(75, 75, 79); line-height: 1.5; font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">5.执行部署命令</h1><div><span style=\"color: rgb(75, 75, 75); font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">在项目根目录下执行</span><br></div>"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "//第一次\nmvn tomcat7:deploy\n//之后\nmvn tomcat7:redeploy"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "//这里我要求先重新打包,并跳过测试,再部署\n//第一次\nmvn package  -Pdevelop -Dmaven.skip.test=true tomcat7:deploy\n\n//之后\nmvn package  -Pdevelop -Dmaven.skip.test=true tomcat7:redeploy"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 10px auto; color: rgb(75, 75, 75); font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">注意事项：</p><p style=\"margin: 10px auto; color: rgb(75, 75, 75); font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong>1.需要将远程机器的tomcat先开启,这里是热部署</strong></p><p style=\"margin: 10px auto; color: rgb(75, 75, 75); font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong>2.可以在本地先调试好，再到远程去执行</strong></p>"
+    }
+  ]
+}

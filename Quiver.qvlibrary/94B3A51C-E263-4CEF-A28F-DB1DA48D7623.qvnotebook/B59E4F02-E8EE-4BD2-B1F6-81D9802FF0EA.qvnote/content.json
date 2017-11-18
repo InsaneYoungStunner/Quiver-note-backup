@@ -1,0 +1,23 @@
+{
+  "title": "Tomcat 路径",
+  "cells": [
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "/Library/Tomcat/bin"
+    },
+    {
+      "type": "text",
+      "data": "Server version: Apache Tomcat/9.0.0.M15"
+    },
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "/Library/apache-tomcat-8.0.41/bin"
+    },
+    {
+      "type": "text",
+      "data": "Server version: Apache Tomcat/8.0.41"
+    }
+  ]
+}

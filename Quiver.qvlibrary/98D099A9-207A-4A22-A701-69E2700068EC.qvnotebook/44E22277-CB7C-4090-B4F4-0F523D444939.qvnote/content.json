@@ -1,0 +1,18 @@
+{
+  "title": "Mac OS X: Resolve absolute path using process’ PID",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(55, 55, 55); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">Mac OS X does not have a /proc file system. Therefore resolving the absolute path and other process&nbsp;informations have to be obtained in a different fashion. OS X has the libproc library, which can be used to gather different process informations. In order to find the absolute path for a given PID, the following code can be used:</span>"
+    },
+    {
+      "type": "code",
+      "language": "c_cpp",
+      "data": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#include <errno.h>\n#include <libproc.h>\n\nint main (int argc, char* argv[])\n{\n\tpid_t pid; int ret;\n\tchar pathbuf[PROC_PIDPATHINFO_MAXSIZE];\n\n\tif ( argc > 1 ) {\n\t\tpid = (pid_t) atoi(argv[1]);\n\t\tret = proc_pidpath (pid, pathbuf, sizeof(pathbuf));\n\t\tif ( ret <= 0 ) {\n\t\t\tfprintf(stderr, \"PID %d: proc_pidpath ();\\n\", pid);\n\t\t\tfprintf(stderr,\t\"    %s\\n\", strerror(errno));\n\t\t} else {\n\t\t\tprintf(\"proc %d: %s\\n\", pid, pathbuf);\n\t\t}\n\t}\n\n\treturn 0;\n}"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(55, 55, 55); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">I was surprised not to be able to easily find documentation for pid information, which in my opinion is quite trivial to be implemented. I had to go through the code of lsof to fing the implementation for reading proc txt section and finally learn about&nbsp;proc_pidinfo. proc_pidpath is just a wrapper for proc_pidinfo to resolve the path.</span>"
+    }
+  ]
+}

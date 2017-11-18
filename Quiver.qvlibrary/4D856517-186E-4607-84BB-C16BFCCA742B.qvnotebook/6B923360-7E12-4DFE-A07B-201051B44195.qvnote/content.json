@@ -1,0 +1,22 @@
+{
+  "title": "批量删除docker container。",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/6AE0718F256E01B8F1EC4B0AD32ADE5B.png\" alt=\"2017-10-25 at 2.21 AM.png\" width=\"1440\" height=\"900\">"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/D951A5F2891809BE405202288D83C8B3.png\" alt=\"2017-10-25 at 3.23 AM.png\" width=\"1440\" height=\"900\">"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker ps -a | grep \"username/repo:tag\" | awk '{print $1}'|xargs -n 1 docker rm"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/76A1957ED8B274CBCB2908AB00D96A56.png\" alt=\"2017-10-25 at 3.26 AM.png\" width=\"1440\" height=\"900\">"
+    }
+  ]
+}

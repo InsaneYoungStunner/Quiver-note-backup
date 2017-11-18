@@ -1,0 +1,21 @@
+{
+  "title": "java 位置",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "## 1.8"
+    },
+    {
+      "type": "text",
+      "data": "/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/bin"
+    },
+    {
+      "type": "markdown",
+      "data": "## 1.9"
+    },
+    {
+      "type": "text",
+      "data": "/Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home"
+    }
+  ]
+}

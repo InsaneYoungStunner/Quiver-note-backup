@@ -1,0 +1,13 @@
+{
+  "title": "Python 中文编码",
+  "cells": [
+    {
+      "type": "text",
+      "data": "# -*- coding: UTF-8 -*-"
+    },
+    {
+      "type": "text",
+      "data": "<div>#!/usr/bin/python</div><div># -*- coding: UTF-8 -*-</div><div><br></div><div>print \"你好，世界\";</div>"
+    }
+  ]
+}

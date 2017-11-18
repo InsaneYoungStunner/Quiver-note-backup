@@ -1,0 +1,123 @@
+{
+  "title": "MongoDB 连接",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">启动 MongoDB服务</h2><div><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">在前面的教程中，我们已经讨论<a href=\"https://www.w3cschool.cn/mongodb/mongodb-window-install.html\" target=\"_blank\" style=\"margin: 0px; padding: 0px; color: rgb(144, 11, 9); outline: 0px; word-break: break-all;\">了如何启动MongoDB服</a>务，你只需要在MongoDB安装目录的bin目录下执行'mongod'即可。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">执行启动操作后，mongodb在输出一些必要信息后不会输出任何信息，之后就等待连接的建立，当连接被建立后，就会开始打印日志信息。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">你可以使用MongoDB shell 来连接 MongoDB 服务器。你也可以使用PHP来连接mongodb。本教程我们会使用 MongoDB shell来连接Mongodb服务，之后的章节我们将会介绍如何通过php 来连接MongoDB服务。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">默认情况下，MongoDB的启动端口为27017。比MongoDB启动端口大1000的端口为MongoDB的web用户界面，你可以再浏览器中输入http://localhost:28017 来访问MongoDB的web用户界面。</p></div>"
+    },
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">通过shell连接MongoDB服务</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">你可以通过执行以下命令来连接MongoDB的服务。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><strong style=\"margin: 0px; padding: 0px;\">注意：</strong>localhost为主机名，这个选项是必须的：</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://localhost"
+    },
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">MongoDB连接命令格式</h2>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">使用用户名和密码连接到MongoDB服务器，你必须使用 'username:password@hostname/dbname' 格式，'username'为用户名，'password' 为密码。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">使用用户名和密码连接登陆到默认数据库：&lt;、p&gt;</p><div><br></div>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://mongo_admin:AxB6_w3r@localhost/"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">以上命令中，用户 mongo_admin使用密码AxB6_w3r连接到本地的MongoDB服务上。输出结果如下所示：&lt;、p&gt;&nbsp;<span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">使用用户名和密码连接登陆到指定数据库：</span></p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">连接到指定数据库的格式如下：</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://mongo_admin:AxB6_w3r@localhost/w3r"
+    },
+    {
+      "type": "text",
+      "data": "<h2 style=\"margin: 20px 0px 10px; padding: 0px; color: rgb(0, 0, 0); line-height: 1.7; font-size: 16px; font-family: Verdana, Arial, Helvetica, sans-serif; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">参数选项说明</h2><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">标准格式：</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">标准的连接格式包含了多个选项(options)，如下所示：</span>"
+    },
+    {
+      "type": "text",
+      "data": "<table class=\"reference\" style=\"margin: 4px 0px; padding: 0px; width: 979px; table-layout: fixed; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><tbody style=\"margin: 0px; padding: 0px;\"><tr style=\"margin: 0px; padding: 0px; background-color: rgb(239, 239, 239);\"><th style=\"margin: 0px; padding: 3px; background-color: rgb(189, 189, 189); border-top-color: rgb(189, 189, 189); border-right-color: rgb(189, 189, 189); border-bottom-style: none; border-left-color: rgb(189, 189, 189); color: rgb(255, 255, 255); vertical-align: top;\">选项</th><th style=\"margin: 0px; padding: 3px; background-color: rgb(189, 189, 189); border-top-color: rgb(189, 189, 189); border-right-color: rgb(189, 189, 189); border-bottom-style: none; border-left-color: rgb(189, 189, 189); color: rgb(255, 255, 255); vertical-align: top;\">描述</th></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">replicaSet=name</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">验证replica set的名称。 Impliesconnect=replicaSet.</td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(239, 239, 239);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">slaveOk=true|false</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\"><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7;\"><li style=\"margin: 0px; padding: 0px;\">true:在connect=direct模式下，驱动会连接第一台机器，即使这台服务器不是主。在connect=replicaSet模式下，驱动会发送所有的写请求到主并且把读取操作分布在其他从服务器。</li><li style=\"margin: 0px; padding: 0px;\">false: 在 connect=direct模式下，驱动会自动找寻主服务器. 在connect=replicaSet 模式下，驱动仅仅连接主服务器，并且所有的读写命令都连接到主服务器。</li></ul></td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">safe=true|false</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\"><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7;\"><ul style=\"margin: 0px; padding: 0px 0px 0px 30px; list-style: disc outside none; line-height: 1.7;\"><li style=\"margin: 0px; padding: 0px;\">true: 在执行更新操作之后，驱动都会发送getLastError命令来确保更新成功。(还要参考 wtimeoutMS).</li></ul></ul>false: 在每次更新之后，驱动不会发送getLastError来确保更新成功。</td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(239, 239, 239);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">w=n</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">驱动添加 { w : n } 到getLastError命令. 应用于safe=true。</td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">wtimeoutMS=ms</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">驱动添加 { wtimeout : ms } 到 getlasterror 命令. 应用于 safe=true.</td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(239, 239, 239);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">fsync=true|false</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\"><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7;\"><li style=\"margin: 0px; padding: 0px;\">true: 驱动添加 { fsync : true } 到 getlasterror 命令.应用于 safe=true.</li><li style=\"margin: 0px; padding: 0px;\">false: 驱动不会添加到getLastError命令中。</li></ul></td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">journal=true|false</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">如果设置wie true, 同步到 journal (在提交到数据库前写入到实体中). 应用于 safe=true</td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(239, 239, 239);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">connectTimeoutMS=ms</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">可以打开连接的时间。</td></tr><tr style=\"margin: 0px; padding: 0px; background-color: rgb(255, 255, 255);\"><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">socketTimeoutMS=ms</td><td style=\"margin: 0px; padding: 7px 5px; min-width: 40px; height: 30px; vertical-align: top; box-sizing: border-box;\">发送和接受sockets的时间。</td></tr></tbody></table>"
+    },
+    {
+      "type": "markdown",
+      "data": "## 示例"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">连接 replica pair, 服务器1为example1.com服务器2为example2。</span>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://example1.com:27017,example2.com:27017"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">连接 replica set 三台服务器 (端口 27017, 27018, 和27019):</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://localhost,localhost:27018,localhost:27019"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">连接 replica set 三台服务器, 写入操作应用在主服务器 并且分布查询到从服务器。</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://host1,host2,host3/?slaveOk=true"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">直接连接第一个服务器，无论是replica set一部分或者主服务器或者从服务器。</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://host1,host2,host3/?connect=direct;slaveOk=true"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">当你的连接服务器有优先级，还需要列出所有服务器，你可以使用上述连接方式。</p><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">安全模式连接到localhost:</p>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://localhost/?safe=true"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">以安全模式连接到replica set，并且等待至少两个复制服务器成功写入，超时时间设置为2秒。</span>"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "mongodb://host1,host2,host3/?safe=true;w=2;wtimeoutMS=2000"
+    }
+  ]
+}

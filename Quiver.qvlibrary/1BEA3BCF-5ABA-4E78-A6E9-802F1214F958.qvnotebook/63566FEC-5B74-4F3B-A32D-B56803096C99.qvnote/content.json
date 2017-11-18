@@ -1,0 +1,9 @@
+{
+  "title": "mac键盘",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(17, 17, 17); font-family: 微软雅黑, Arial, HELVETICA; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(254, 254, 254);\">大家有没有发现Mac的键盘没有Home, End, Page UP, Page DOWN这几个键？其实可以用Fn键来组合得到同样的功能： Home键=Fn+左方向 End键=Fn+右方向 PageUP=Fn+上方向 PageDOWN=Fn+下方向 向前Delete=Fn+delete键</span>"
+    }
+  ]
+}

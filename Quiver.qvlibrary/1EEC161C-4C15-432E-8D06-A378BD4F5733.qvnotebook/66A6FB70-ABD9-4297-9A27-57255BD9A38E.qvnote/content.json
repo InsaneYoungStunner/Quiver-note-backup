@@ -1,0 +1,15 @@
+{
+  "title": "启动",
+  "cells": [
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "src/redis-server"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "src/redis-cli"
+    }
+  ]
+}

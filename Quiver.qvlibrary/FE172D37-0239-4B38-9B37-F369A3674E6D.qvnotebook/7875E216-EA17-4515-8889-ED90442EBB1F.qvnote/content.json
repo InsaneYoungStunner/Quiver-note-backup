@@ -1,0 +1,10 @@
+{
+  "title": "Bean定义模板",
+  "cells": [
+    {
+      "type": "code",
+      "language": "xml",
+      "data": "\\<bean id=\"beanTeamplate\" abstract=\"true\"\\> \\<property name=\"message1\" value=\"Hello World!\"/\\> \\<property name=\"message2\" value=\"Hello Second World!\"/\\> \\<property name=\"message3\" value=\"Namaste India!\"/\\> \\</bean\\>"
+    }
+  ]
+}

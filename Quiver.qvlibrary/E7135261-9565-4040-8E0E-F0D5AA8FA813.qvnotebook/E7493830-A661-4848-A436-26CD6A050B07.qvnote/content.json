@@ -1,0 +1,14 @@
+{
+  "title": "以对象中的对象为条件查询",
+  "cells": [
+    {
+      "type": "code",
+      "language": "json",
+      "data": "db.dd.find({\"project.modelVersion\":\"4.0.0\"})"
+    },
+    {
+      "type": "text",
+      "data": "使用点（.)作为分割符"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "数据库命令",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<strong style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">\"show dbs\"</strong><span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">&nbsp;命令可以显示所有数据的列表</span>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "show dbs"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">执行&nbsp;</span><strong style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">\"db\"</strong><span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">&nbsp;命令可以显示当前数据库对象或集合。</span>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "db"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">运行\"use\"命令，可以连接到一个指定的数据库。</span>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "use local"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">以上实例命令中，\"local\" 是你要链接的数据库。</span>"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">数据库也通过名字来标识。数据库名可以是满足以下条件的任意UTF-8字符串。</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\">不能是空字符串（\"\")。</li><li style=\"margin: 0px; padding: 0px;\">不得含有' '（空格)、.、$、/、\\和\\0 (空宇符)。</li><li style=\"margin: 0px; padding: 0px;\">应全部小写。</li><li style=\"margin: 0px; padding: 0px;\">最多64字节。</li></ul>"
+    }
+  ]
+}

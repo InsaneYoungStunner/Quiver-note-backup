@@ -1,0 +1,13 @@
+{
+  "title": "mvn 创建时在generating project in interactive mode卡住了，怎么解决？",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/64794B54A9566CD872CFA3D19298F68A.png\" alt=\"http---img.mukewang.com-56a5dd7b0001480f06380400.jpg.png\" width=\"375\" height=\"235\">"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(20, 25, 30); font-family: &quot;PingFang SC&quot;, 微软雅黑, &quot;Microsoft YaHei&quot;, Helvetica, &quot;Helvetica Neue&quot;, Tahoma, Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-weight: bold; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">从图中可以看出，为啥卡在generating project in interactive mode，因为请求从远程服务器上取catalog。在-DinteractiveMode=false下，设置maven不要从远程服务器上获取catalog，增加参数-DarchetypeCatalog=internal后解决卡住问题。</span>"
+    }
+  ]
+}

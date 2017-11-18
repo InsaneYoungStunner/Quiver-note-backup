@@ -1,0 +1,76 @@
+{
+  "title": "代码片段",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# 运行交互式的容器"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "docker run -i -t ubuntu:15.10 /bin/bash"
+    },
+    {
+      "type": "markdown",
+      "data": "# 帮助"
+    },
+    {
+      "type": "code",
+      "language": "json",
+      "data": "docker stats --help"
+    },
+    {
+      "type": "markdown",
+      "data": "# 获取一个新的镜像"
+    },
+    {
+      "type": "text",
+      "data": "<span style=\"color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">当我们在本地主机上使用一个不存在的镜像时 Docker 就会自动下载这个镜像。如果我们想预先下载这个镜像，我们可以使用&nbsp;docker pull&nbsp;命令来下载它。</span>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker pull ubuntu"
+    },
+    {
+      "type": "markdown",
+      "data": "# 查找镜像"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker search httpd"
+    },
+    {
+      "type": "markdown",
+      "data": "# 更新镜像"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": " docker commit -m=\"has update\" -a=\"youj\" e218edb10161 w3cschool/ubuntu:v2"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">各个参数说明：</p><ul style=\"margin: 10px 0px; padding: 0px 0px 0px 30px; list-style-position: outside; list-style-image: none; line-height: 1.7; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-variant-ligatures: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\"><li style=\"margin: 0px; padding: 0px;\"><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\"><strong style=\"margin: 0px; padding: 0px;\">-m:</strong>提交的描述信息</p></li><li style=\"margin: 0px; padding: 0px;\"><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\"><strong style=\"margin: 0px; padding: 0px;\">-a:</strong>指定镜像作者</p></li><li style=\"margin: 0px; padding: 0px;\"><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\"><strong style=\"margin: 0px; padding: 0px;\">e218edb10161：</strong>容器ID</p></li><li style=\"margin: 0px; padding: 0px;\"><p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\"><strong style=\"margin: 0px; padding: 0px;\">w3cschool/ubuntu:v2:</strong>指定要创建的目标镜像名</p><div><br></div></li></ul>"
+    },
+    {
+      "type": "markdown",
+      "data": "# 构建镜像"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "FROM    centos:6.7\nMAINTAINER      Fisher \"fisher@sudops.com\"\n\nRUN     /bin/echo 'root:lxw212241' |chpasswd\nRUN     useradd lixiaowen\nRUN     /bin/echo 'lixiaowen:lxw212241' |chpasswd\nRUN     /bin/echo -e \"LANG=\\\"en_US.UTF-8\\\"\" &gt; /etc/default/local\nEXPOSE  22\nEXPOSE  80\nCMD     /usr/sbin/sshd -D"
+    },
+    {
+      "type": "text",
+      "data": "<p style=\"margin: 0px 0px 5px; padding: 0px; word-wrap: break-word; color: rgb(0, 0, 0); line-height: 1.7;\">然后，我们使用&nbsp;Dockerfile&nbsp;文件，通过&nbsp;docker build&nbsp;命令来构建一个镜像。</p>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "docker build -t youj/centos:6.7 ."
+    }
+  ]
+}

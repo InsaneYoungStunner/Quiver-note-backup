@@ -1,0 +1,9 @@
+{
+  "title": "redis log位置与配置",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "Found it with:\n```sh\nsudo tail /var/log/redis/redis-server.log -n 100\n```\nSo if the setup was more standard that should be:\n```sh\nsudo tail /var/log/redis_6379.log -n 100\n```\nThis outputs the last 100 lines of the file.\n\nWhere your log file is located is in your configs that you can access with:\n```sh\nredis-cli CONFIG GET *\n```\nThe log file may not always be shown using the above. In that case use\n```sh\ntail -f `less  /etc/redis/redis.conf | grep logfile|cut -d\\  -f2`\n```"
+    }
+  ]
+}
