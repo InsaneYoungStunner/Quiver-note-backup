@@ -1,0 +1,9 @@
+{
+  "created_at" : 1511190192,
+  "tags" : [
+
+  ],
+  "title" : "git log --pretty=format:'%h %s' --graph",
+  "updated_at" : 1511190206,
+  "uuid" : "A619C6F5-D55C-4264-B808-76501A36127E"
+}

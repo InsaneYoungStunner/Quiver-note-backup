@@ -1,0 +1,9 @@
+{
+  "title": "xml文件中xsi等等都是什么意思",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>就拿spring的配置文件来说</div><div><?xml version=\"1.0\" encoding=\"UTF-8\"?></div><div><beans xmlns=\"http://www.springframework.org/schema/beans\"</div><div>&nbsp;      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"</div><div>&nbsp;      xsi:schemaLocation=\"http://www.springframework.org/schema/beans</div><div>&nbsp;                         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd\"></div><div>&nbsp;      ... ...</div><div></beans></div><div>&nbsp;</div><div>&nbsp;</div><div>说明如下：</div><div>beans —— xml文件的根节点</div><div>xmlns ——是XML NameSpace的缩写，因为XML文件的标签名称都是自定义的，自己写的和其他人定义的标签很有可能会重复命名，而功能却不一样，所以需要加上一个namespace来区分这个xml文件和其他的xml文件，类似于java中的package。</div><div>xmlns:xsi ——是指xml文件遵守xml规范，xsi全名：xml schema instance</div><div>xsi:schemaLocation——是指具体用到的schema资源（不要看相关中文资料，看了就不明白了，schema就是schema~你把他翻译成对文档的限制就行了。你可能会说，dtd才是，实际上xsd和dtd是一样的~~）</div><div>&nbsp;</div>"
+    }
+  ]
+}

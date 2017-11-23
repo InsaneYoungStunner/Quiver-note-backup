@@ -1,0 +1,9 @@
+{
+  "title": "git log --pretty=format:'%h %s' --graph",
+  "cells": [
+    {
+      "type": "text",
+      "data": "图示提交日志"
+    }
+  ]
+}

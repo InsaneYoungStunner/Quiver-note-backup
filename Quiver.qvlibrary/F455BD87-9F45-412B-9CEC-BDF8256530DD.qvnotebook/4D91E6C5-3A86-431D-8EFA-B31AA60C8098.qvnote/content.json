@@ -1,0 +1,9 @@
+{
+  "title": "使用git tag -a <版本号> -m“备注”为最新提交打上标签",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<span style=\"font-family: &quot;Microsoft YaHei&quot;, Helvetica, &quot;Meiryo UI&quot;, &quot;Malgun Gothic&quot;, &quot;Segoe UI&quot;, &quot;Trebuchet MS&quot;, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, &quot;Helvetica Neue&quot;, &quot;Droid Sans&quot;, &quot;wenquanyi micro hei&quot;, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif; font-size: 16px; font-variant-ligatures: normal; orphans: 2; text-align: justify; text-indent: 32px; widows: 2; background-color: rgb(255, 255, 255);\">使用git tag -a &lt;版本号&gt; -m“备注”为最新提交打上标签</span>"
+    }
+  ]
+}

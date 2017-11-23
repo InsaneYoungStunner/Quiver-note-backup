@@ -1,0 +1,13 @@
+{
+  "title": "Mysql配置文件",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# 修改MySQL端口方法:"
+    },
+    {
+      "type": "text",
+      "data": "/usr/local/mysql-5.7.17-macos10.12-x86_64/support-files/my.cnf"
+    }
+  ]
+}
