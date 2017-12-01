@@ -1,4 +1,10 @@
 {
-  "title": "Untitled Note",
-  "cells": []
+  "title": "打印classpath",
+  "cells": [
+    {
+      "type": "code",
+      "language": "java",
+      "data": "System.out.println(System.getProperty(\"java.class.path\"));//系统的classpaht路径\n        System.out.println(System.getProperty(\"user.dir\"));//用户的当前路径\n        "
+    }
+  ]
 }
